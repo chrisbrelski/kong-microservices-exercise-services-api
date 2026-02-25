@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2026-02-18T21:43:43.550Z",
+	"__export_date": "2026-02-25T01:15:05.190Z",
 	"__export_source": "insomnia.desktop.app:v6.3.2",
 	"resources": [
 		{
@@ -67,7 +67,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1771374680330,
 			"method": "GET",
-			"modified": 1771375277245,
+			"modified": 1771981904958,
 			"name": "Get Service by ID",
 			"parameters": [],
 			"parentId": "wrk_72fc9f59d2434a5896ba4aaf8955caf8",
@@ -77,7 +77,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:9000/services/{id}",
+			"url": "http://localhost:9000/services/1",
 			"_type": "request"
 		},
 		{
@@ -108,7 +108,7 @@
 			"authentication": {},
 			"body": {
 				"mimeType": "application/json",
-				"text": "{\n\t\"name\": \"Stores API\",\n\t\"description\": \"API for managing stores\",\n\t\"baseUri\": \"http://api.company.com/stores\"\n}"
+				"text": "{\n\t\"name\": \"Accounts API\",\n\t\"description\": \"API for accounts\",\n\t\"baseUri\": \"http://api.company.com/stores\"\n}"
 			},
 			"created": 1771431400998,
 			"description": "",
@@ -122,7 +122,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1771374723204,
 			"method": "POST",
-			"modified": 1771450547843,
+			"modified": 1771810005952,
 			"name": "Create a Service",
 			"parameters": [],
 			"parentId": "wrk_72fc9f59d2434a5896ba4aaf8955caf8",
@@ -145,7 +145,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1771374670488,
 			"method": "GET",
-			"modified": 1771449994508,
+			"modified": 1771809836437,
 			"name": "Get All Services - Paginated",
 			"parameters": [],
 			"parentId": "wrk_72fc9f59d2434a5896ba4aaf8955caf8",
@@ -155,7 +155,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:9000/services?pageSize=5&page=2",
+			"url": "http://localhost:9000/services?pageSize=1&page=3",
 			"_type": "request"
 		},
 		{
@@ -168,7 +168,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1771374675434,
 			"method": "GET",
-			"modified": 1771449992846,
+			"modified": 1771810018611,
 			"name": "Get All Services - Sorted",
 			"parameters": [],
 			"parentId": "wrk_72fc9f59d2434a5896ba4aaf8955caf8",
@@ -179,6 +179,29 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "http://localhost:9000/services?sort=asc",
+			"_type": "request"
+		},
+		{
+			"_id": "req_8b641f94c3da4fdabb0c6a643029b9ed",
+			"authentication": {},
+			"body": {},
+			"created": 1771982034628,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1771374679106,
+			"method": "GET",
+			"modified": 1771982044456,
+			"name": "Get Service with Versions",
+			"parameters": [],
+			"parentId": "wrk_72fc9f59d2434a5896ba4aaf8955caf8",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9000/services/1/versions",
 			"_type": "request"
 		}
 	]
