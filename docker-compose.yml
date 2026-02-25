@@ -1,0 +1,17 @@
+version: "3.8"
+
+volumes:
+  pg_data:
+
+services:
+  services_api_postgres:
+    image: postgres:18.0-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "${POSTGRES_PORT}:5432"
